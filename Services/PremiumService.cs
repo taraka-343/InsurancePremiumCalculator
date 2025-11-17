@@ -1,8 +1,9 @@
 ﻿using InsurancePremiumCalcBE.Models;
+using InsurancePremiumCalcBE.Services.IServices;
 
 namespace InsurancePremiumCalcBE.Services
 {
-    public class PremiumService
+    public class PremiumService : IPremiumService
     {
         Dictionary<string, decimal> _ratingFactors = new()
         {
