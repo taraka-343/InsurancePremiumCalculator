@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InsurancePremiumCalcBE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eaf63925576190f9edd23f20e845b76d8b06167b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb86f177fb98659b9d1ff0e5d18cd7c33fabbd01")]
 [assembly: System.Reflection.AssemblyProductAttribute("InsurancePremiumCalcBE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InsurancePremiumCalcBE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

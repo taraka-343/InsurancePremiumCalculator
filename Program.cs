@@ -3,6 +3,17 @@ using InsurancePremiumCalcBE.Services;
 using InsurancePremiumCalcBE.Services.IServices;
 
 var builder = WebApplication.CreateBuilder(args);
+// Add CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularClient",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:4200")
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
 
 // Add services
 builder.Services.AddScoped<IPremiumService, PremiumService>();
