@@ -3,9 +3,11 @@ using InsurancePremiumCalcBE.Services;
 using InsurancePremiumCalcBE.Services.IServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace InsurancePremiumCalcBE.Controller
 {
+    [EnableRateLimiting("FixedWindowPolicy")]
     [Route("api/[controller]")]
     [ApiController]
     public class PremiumController : ControllerBase

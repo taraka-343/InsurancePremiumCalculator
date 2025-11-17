@@ -53,7 +53,7 @@ app.UseHttpsRedirection();
 app.UseCors("AllowPremierClient");
 app.UseRateLimiter();
 
-// Map controller routes (VERY IMPORTANT)
-app.MapControllers();
+// Map controller routes
+app.MapControllers().RequireRateLimiting("FixedWindowPolicy"); 
 
 app.Run();
