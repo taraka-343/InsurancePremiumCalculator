@@ -1,3 +1,4 @@
+using InsurancePremiumCalcBE.CustomMiddleware;
 using InsurancePremiumCalcBE.Services;
 using InsurancePremiumCalcBE.Services.IServices;
 
@@ -21,6 +22,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+//adding custom middleware
+app.UseMiddleware<GlobalExceptionMiddleware>();
 
 app.UseHttpsRedirection();
 
