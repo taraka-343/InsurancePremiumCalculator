@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngularClient",
+    options.AddPolicy("AllowPremierClient",
         policy =>
         {
             policy.WithOrigins("http://localhost:4200")
@@ -37,6 +37,7 @@ if (app.Environment.IsDevelopment())
 app.UseMiddleware<GlobalExceptionMiddleware>();
 
 app.UseHttpsRedirection();
+app.UseCors("AllowPremierClient");
 
 // Map controller routes (VERY IMPORTANT)
 app.MapControllers();
