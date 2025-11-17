@@ -1,6 +1,8 @@
 using InsurancePremiumCalcBE.CustomMiddleware;
 using InsurancePremiumCalcBE.Services;
 using InsurancePremiumCalcBE.Services.IServices;
+using Microsoft.AspNetCore.RateLimiting;
+using System.Threading.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add CORS
@@ -13,6 +15,17 @@ builder.Services.AddCors(options =>
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
+});
+// Rate Limiting
+builder.Services.AddRateLimiter(options =>
+{
+    options.AddFixedWindowLimiter("FixedWindowPolicy", limiterOptions =>
+    {
+        limiterOptions.PermitLimit = 5; // allow 5 requests
+        limiterOptions.Window = TimeSpan.FromSeconds(10); // in 10 seconds
+        limiterOptions.QueueLimit = 2; // queue extra 2 requests
+        limiterOptions.QueueProcessingOrder = QueueProcessingOrder.OldestFirst;
+    });
 });
 
 // Add services
@@ -38,6 +51,7 @@ app.UseMiddleware<GlobalExceptionMiddleware>();
 
 app.UseHttpsRedirection();
 app.UseCors("AllowPremierClient");
+app.UseRateLimiter();
 
 // Map controller routes (VERY IMPORTANT)
 app.MapControllers();
