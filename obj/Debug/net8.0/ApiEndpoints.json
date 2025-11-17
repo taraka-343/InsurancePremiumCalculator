@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "InsurancePremiumCalcBE.Controller.PremiumController",
+    "Method": "CalculatePremium",
+    "RelativePath": "api/Premium/calculate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "InsurancePremiumCalcBE.Models.PremiumRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "22IQ9mr3cCOqbtartIZZW/ApRj7XgUXfcRyztvtZCQQ=",
+  "Source": "InsurancePremiumCalcBE",
+  "BasePath": "_content/InsurancePremiumCalcBE",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
