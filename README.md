@@ -13,6 +13,7 @@ Dot Net Web API that calculates the premium insurance based on occupation and re
 ## **Clarifications**
 1. PremiumRequest class is the model for incoming data from client.
 2. CalculatePremium method in IPremiumService will calculate the premium insurance and return backs to controller which will further sends to client.
+3. The endpoint of the controller will be integrated in angular application (client) to consume this service
 
 ---
 
