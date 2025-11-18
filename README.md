@@ -44,4 +44,4 @@ Dot Net Web API that calculates the premium insurance based on occupation and re
 ## **Setup and Run**
 1. Clone the repository:
 ```bash
-git clone https://github.com/tarak-343/InsurancePremiumCalculator.git
+git clone https://github.com/taraka-343/InsurancePremiumCalculator.git
